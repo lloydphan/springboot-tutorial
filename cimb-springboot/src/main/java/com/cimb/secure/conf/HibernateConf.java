@@ -26,7 +26,7 @@ public class HibernateConf {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean lcemfb = new LocalContainerEntityManagerFactoryBean();
         lcemfb.setDataSource(dataSource());
-        lcemfb.setPackagesToScan(new String[]{"com.cimb.secure.model"});
+        lcemfb.setPackagesToScan(new String[]{"com.cimb.secure.domain"});
 
         final JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         lcemfb.setJpaVendorAdapter(vendorAdapter);
