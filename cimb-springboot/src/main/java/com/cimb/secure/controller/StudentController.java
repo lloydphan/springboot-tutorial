@@ -1,6 +1,6 @@
 package com.cimb.secure.controller;
 
-import com.cimb.secure.Constants;
+import com.cimb.secure.constant.SecurityConstant;
 import com.cimb.secure.domain.Student;
 import com.cimb.secure.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/students")
-@CrossOrigin(origins = Constants.CROSS_DOMAIN_SERVER)
+@CrossOrigin(origins = SecurityConstant.CROSS_DOMAIN_URL)
 public class StudentController implements IController<Student> {
 
     @Autowired
